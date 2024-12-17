@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVOWB Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>BVOWB Demo</h1>
+    <button onclick="sendEmail()">Terugbelnotitie</button>
+
+    <script>
+        function sendEmail() {
+            var emailBody = "Ik ben gebeld door xxx, wil je terugbellen";
+            var mailtoLink = "mailto:?body=" + encodeURIComponent(emailBody);
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
